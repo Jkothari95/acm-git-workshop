@@ -76,9 +76,13 @@ div {
   display: inline-block;
   max-width: 120px;
   min-width: 120px;
-  
+
 }
 
+.is-tiny{
+  transform: scale(0.001);
+  transition: transform 0ms;
+}
 .thumbnail-list {
   display: flex;
   flex: 0 1 auto;
@@ -86,10 +90,13 @@ div {
   list-style: none;
   order: 2;
   overflow-x: auto;
-  padding: 0;
+  padding: 20px 0;
   white-space: nowrap;
 }
 
+.thumbnail-item:hover{
+  transform: scale(1.2);
+}
 .detail-image {
   width: 90%;
 }
@@ -104,6 +111,7 @@ div {
 .detail-image-frame {
   position: relative;
   text-align: center;
+  transition: transform 333ms cubic-bezier(0,.96,.94,.19);
 }
 
 .detail-image-title {
@@ -138,6 +146,7 @@ div {
     flex-direction: column;
     margin-left: 20px;
     order: 0;
+    padding: 0 35px;
   }
 
   .thumbnail-item {
